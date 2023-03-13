@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9FF"
+    tools:context=".LoginActivity">
+
+
+    <!--    text Sign in -->
+    <TextView
+        android:id="@+id/log_in_txt"
+        android:layout_width="199dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center_horizontal|top"
+        android:text="@string/log_in_txt"
+        android:textAppearance="@style/sign_in"
+        tools:ignore="TextSizeCheck" />
+
+    <!--    First Name field-->
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/log_in_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textAppearance="@style/first_name"
+        android:textSize="11sp"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+        android:importantForAutofill="no" />
+
+<!--        last name field-->
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/login_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textAppearance="@style/last_name"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+    <!--    button Log In-->
+    <Button
+        android:id="@+id/log_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/log_in_txt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/log_in_btn"
+        android:textAllCaps="false"
+        android:textColor="#EAEAEA"
+        android:textSize="18sp"
+        tools:ignore="VisualLintButtonSize" />
+
+</RelativeLayout>

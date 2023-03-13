@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FAF9FF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/left_arrow"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/title_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center_horizontal|top"
+        android:text="@string/profile"
+        android:textAppearance="@style/profile"
+        android:textSize="15sp"
+        tools:ignore="TextSizeCheck" />
+
+    <ScrollView
+        android:id="@+id/profile_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_Profile"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FAF9FF"
+            android:orientation="vertical" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="69dp"
+                android:layout_height="74dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/default_avatar"
+                app:civ_border_color="#C0C0C0"
+                app:civ_border_width="1dp"
+                tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/change_photo_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal|top"
+                android:text="@string/change_phot"
+                android:textAppearance="@style/change_phot"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/change_photo_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal|top"
+                android:textAppearance="@style/profile_name"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/upload_btn"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/upload_item"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                app:icon="@drawable/upload"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!--Trade store-->
+            <ImageView
+                android:id="@+id/trade_store_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/upload_btn"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:src="@drawable/credit_card"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/trade_store_txt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/upload_btn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/trade_store_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/trade_store"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/trade_store_arrow"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/upload_btn"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/trade_store_txt"
+                android:clickable="true"
+                android:src="@drawable/next"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <!--Payment method-->
+            <ImageView
+                android:id="@+id/payment_method_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_store_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:src="@drawable/credit_card"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/payment_method_txt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_store_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/payment_method_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/payment_method"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/payment_method_arrow"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_store_txt"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/payment_method_txt"
+                android:clickable="true"
+                android:src="@drawable/next"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <!--    balance-->
+            <ImageView
+                android:id="@+id/balance_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/payment_method_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:src="@drawable/credit_card"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/balance_txt"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/payment_method_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/balance_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/balance"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- TODO: Changing BALANCE -->
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/payment_method_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toEndOf="@+id/balance_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="right|center_vertical"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <!--    trade history-->
+            <ImageView
+                android:id="@+id/trade_history_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/balance_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@drawable/credit_card"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/trade_history_txt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/balance_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/trade_history_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/trade_history"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/trade_history_arrow"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/balance_txt"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/trade_history_txt"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:src="@drawable/next"
+                tools:ignore="ContentDescription,HardcodedText,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+            <!--    Restore Purchase-->
+            <ImageView
+                android:id="@+id/restore_purchase_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_history_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@drawable/restore_purchase"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/restore_purchase_txt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_history_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/restore_purchase_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/restore_purchase"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/restore_purchase_arrow"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/trade_history_txt"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/restore_purchase_txt"
+                android:clickable="true"
+                android:src="@drawable/next"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <!--    help-->
+            <ImageView
+                android:id="@+id/help_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/restore_purchase_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@drawable/help"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/help_txt"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/restore_purchase_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/help_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/help"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!--    Log out-->
+            <ImageView
+                android:id="@+id/log_out_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/help_txt"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@drawable/log_out"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/log_out_txt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/help_txt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/log_out_img"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="@string/log_out"
+                android:textAppearance="@style/trade_store"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_in_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FAF9FF"
+    tools:context=".MainActivity">
+    <!--    text Sign in -->
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/sign_in" />
+
+    <!--    First Name field-->
+    <EditText
+        android:id="@+id/signin_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/first_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textAppearance="@style/first_name"
+        android:textSize="11sp" />
+
+    <!--    last name field-->
+    <EditText
+        android:id="@+id/signin_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/signin_first_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/last_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textAppearance="@style/last_name" />
+
+    <!--    Email field-->
+    <EditText
+        android:id="@+id/signin_email"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/signin_last_name"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textAppearance="@style/email" />
+
+    <!--    password field-->
+    <EditText
+        android:id="@+id/signin_pass"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/signin_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textAppearance="@style/first_name"
+        android:textSize="11sp" />
+
+    <!--    button Sign In-->
+    <Button
+        android:id="@+id/sign_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/sign_in"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:textColor="#EAEAEA"
+        android:textSize="18sp" />
+
+
+    <!--    text Already have an account?-->
+    <TextView
+        android:id="@+id/already_hav"
+        android:layout_width="120dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/sign_in_btn"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_light"
+        android:gravity="top"
+        android:text="@string/already_hav"
+        android:textAppearance="@style/already_hav" />
+
+    <!--    link Log in-->
+    <TextView
+        android:id="@+id/log_in"
+        android:layout_width="35dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/sign_in_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/already_hav"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|top"
+        android:text="@string/log_in"
+        android:textAppearance="@style/log_in" />
+
+    <!--    sign in with Google-->
+    <ImageView
+        android:id="@+id/google_logo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/sign_in_btn"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/sign_in_google"
+        android:src="@drawable/google_icon" />
+
+    <TextView
+        android:id="@+id/sign_in_google"
+        android:layout_width="117dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/sign_in_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in_google"
+        android:textAppearance="@style/sign_in_with" />
+
+    <!--    sign in with Apple-->
+    <ImageView
+        android:id="@+id/apple_logo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/sign_in_google"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/sign_in_apple"
+        android:src="@drawable/apple_icon" />
+
+    <TextView
+        android:id="@+id/sign_in_apple"
+        android:layout_width="107dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/sign_in_google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in_apple"
+        android:textAppearance="@style/sign_in_with" />
+</RelativeLayout>

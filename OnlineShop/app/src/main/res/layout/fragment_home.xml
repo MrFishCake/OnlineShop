@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FAF9FF"
+    tools:context=".MainActivity">
+
+    <Space
+        android:id="@+id/just_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/name_of_shop_1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/just_space"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/name_1"
+        android:textAppearance="@style/name_1"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/name_of_shop_2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/just_space"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/name_2"
+        android:textAppearance="@style/name_2" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/name_of_shop_2"
+        android:clickable="true"
+        android:src="@drawable/default_avatar"
+        app:civ_border_color="#4E4D4D"
+        app:civ_border_width="1dp"
+        tools:ignore="ContentDescription,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_below="@+id/profile_img"
+        android:layout_marginStart="55dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/name_of_shop_2"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/location"
+        android:textAppearance="@style/location" />
+
+    <ImageView
+        android:id="@+id/location_img"
+        android:layout_width="6dp"
+        android:layout_height="13dp"
+        android:layout_below="@+id/profile_img"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/location"
+        android:src="@drawable/location_arrow"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:id="@+id/profile_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/location_img"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FAF9FF"
+            android:orientation="vertical">
+
+            <Space
+                android:id="@+id/just_space2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/search_field"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/search_field"
+                android:fontFamily="@font/montserrat_light"
+                android:hint="@string/what_are_yo"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textAppearance="@style/first_name"
+                android:textSize="11sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView3"-->
+<!--                android:layout_width="12dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:layout_marginStart="330dp"-->
+<!--                android:layout_toEndOf="@+id/just_space2"-->
+<!--                android:src="@drawable/search_img"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="12dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="-76dp"
+                android:layout_toEndOf="@+id/search_field"
+                android:src="@drawable/search_img"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/first_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_field"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="14.46dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/phones_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/category_phones"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/headphones_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/category_headphones"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/games_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/category_games"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/cars_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/category_cars"
+                    tools:ignore="ContentDescription,HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/furniture_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/category_furniture"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/kids_category"
+                    android:layout_width="42.11dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/category_kids"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <!--categories texts-->
+            <TextView
+                android:id="@+id/phones_txt"
+                android:layout_width="42.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="29dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/phones"
+                android:textAppearance="@style/categories" />
+
+            <TextView
+                android:id="@+id/headphones_txt"
+                android:layout_width="52.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/phones_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/headphones"
+                android:textAppearance="@style/categories"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/games_txt"
+                android:layout_width="42.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/headphones_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/games"
+                android:textAppearance="@style/categories" />
+
+            <TextView
+                android:id="@+id/cars_txt"
+                android:layout_width="42.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="19dp"
+                android:layout_toEndOf="@+id/games_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/cars"
+                android:textAppearance="@style/categories" />
+
+            <TextView
+                android:id="@+id/furniture_txt"
+                android:layout_width="42.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="19dp"
+                android:layout_toEndOf="@+id/cars_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/furniture"
+                android:textAppearance="@style/categories" />
+
+            <TextView
+                android:id="@+id/kids_txt"
+                android:layout_width="42.11dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/first_line"
+                android:layout_marginStart="21dp"
+                android:layout_toEndOf="@+id/furniture_txt"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="@string/kids"
+                android:textAppearance="@style/categories" />
+
+<!--            LATEST-->
+            <TextView
+                android:id="@+id/latest_txt"
+                android:layout_width="82dp"
+                android:layout_height="17dp"
+                android:layout_below="@+id/phones_txt"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/latest"
+                android:textAppearance="@style/headlines"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/view_all"
+                android:layout_width="34dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/kids_txt"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/furniture_txt"
+                android:gravity="top"
+                android:text="@string/view_all"
+                android:textAppearance="@style/view_all"
+                android:visibility="gone" />
+
+            <!--            Latest scroll-->
+            <HorizontalScrollView
+                android:id="@+id/scrollview_latest"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/latest_txt"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:scrollbarStyle="insideOverlay"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#FAF9FF"
+                    android:orientation="horizontal"
+                    tools:ignore="ScrollViewSize">
+                    <!--            latest 1-->
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/latest_1"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="11dp"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/latest_1_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="91dp"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAppearance="@style/latestProductCategory" />
+
+                    <TextView
+                        android:id="@+id/latest_1_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/latest_1_category"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductName" />
+
+                    <TextView
+                        android:id="@+id/latest_1_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/latest_1_name"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductPrice" />
+
+                    <ImageView
+                        android:id="@+id/latest_1_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="124dp"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            latest 2-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/latest_2"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/latest_1"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/latest_2_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/latest_1"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAppearance="@style/latestProductCategory" />
+
+                    <TextView
+                        android:id="@+id/latest_2_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/latest_2_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/latest_1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductName" />
+
+                    <TextView
+                        android:id="@+id/latest_2_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/latest_2_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/latest_1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductPrice" />
+
+                    <ImageView
+                        android:id="@+id/latest_2_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/latest_1"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            latest 3-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/latest_3"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/latest_2"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/latest_3_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/latest_2"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAppearance="@style/latestProductCategory" />
+
+                    <TextView
+                        android:id="@+id/latest_3_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/latest_1_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/latest_2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductName" />
+
+                    <TextView
+                        android:id="@+id/latest_3_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/latest_3_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/latest_2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductPrice"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/latest_3_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/latest_2"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            latest 4-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/latest_4"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/latest_3"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/latest_4_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/latest_3"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAppearance="@style/latestProductCategory" />
+
+                    <TextView
+                        android:id="@+id/latest_4_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/latest_1_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/latest_3"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductName" />
+
+                    <TextView
+                        android:id="@+id/latest_4_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/latest_3_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/latest_3"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:textAppearance="@style/latestProductPrice" />
+
+                    <ImageView
+                        android:id="@+id/latest_4_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/latest_3"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription,HardcodedText" />
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/flash_sale_txt"
+                android:layout_width="82dp"
+                android:layout_height="17dp"
+                android:layout_below="@+id/scrollview_latest"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Flash sale"
+                android:textAppearance="@style/headlines"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/view_all2"
+                android:layout_width="34dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/scrollview_latest"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/furniture_txt"
+                android:gravity="top"
+                android:text="@string/view_all"
+                android:textAppearance="@style/view_all" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollview_flashsale"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/flash_sale_txt"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:scrollbarStyle="insideOverlay">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#FAF9FF"
+                    android:orientation="horizontal"
+                    tools:ignore="ScrollViewSize">
+                    <!--            latest 1-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/flashsale_1"
+                        android:layout_width="190dp"
+                        android:layout_height="221dp"
+                        android:layout_marginStart="11dp"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <ImageView
+                        android:id="@+id/falshsale_1_saleimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="142dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/sale" />
+
+                    <TextView
+                        android:id="@+id/flashsale_1_category"
+                        android:layout_width="49.58dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="123dp"
+                        android:background="@drawable/rectangle_flashsale_category"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="Kids"
+                        android:textAppearance="@style/flashSaleCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/flashsale_1_name"
+                        android:layout_width="87dp"
+                        android:layout_height="36dp"
+                        android:layout_below="@+id/flashsale_1_category"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="New balance sneakers"
+                        android:textAppearance="@style/flashSaleName" />
+
+                    <TextView
+                        android:id="@+id/flashsale_1_price"
+                        android:layout_width="87dp"
+                        android:layout_height="12dp"
+                        android:layout_below="@+id/flashsale_1_name"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 30,000"
+                        android:textAppearance="@style/flashSalePrice"
+                        tools:ignore="TextSizeCheck" />
+
+                    <ImageView
+                        android:id="@+id/flashsale_add_to_favoreites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="183dp"
+                        android:layout_toEndOf="@+id/flashsale_1_price"
+                        android:src="@drawable/add_flashsale_to_faverites" />
+
+                    <ImageView
+                        android:id="@+id/flashsale_1_add_to_shopping_cart"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="179dp"
+                        android:layout_toEndOf="@+id/flashsale_add_to_favoreites"
+                        android:src="@drawable/add_flashsale_to_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            flashsale 2-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/flashsale_2"
+                        android:layout_width="190dp"
+                        android:layout_height="221dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_toEndOf="@+id/flashsale_1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/latest1"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <ImageView
+                        android:id="@+id/falshsale_2_saleimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toEndOf="@+id/flashsale_1"
+                        android:src="@drawable/sale" />
+
+                    <TextView
+                        android:id="@+id/flashsale_2_category"
+                        android:layout_width="49.58dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="123dp"
+                        android:layout_toEndOf="@+id/flashsale_1"
+                        android:background="@drawable/rectangle_flashsale_category"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="Kids"
+                        android:textAppearance="@style/flashSaleCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/flashsale_2_name"
+                        android:layout_width="87dp"
+                        android:layout_height="36dp"
+                        android:layout_below="@+id/flashsale_1_category"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toEndOf="@+id/flashsale_1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="New balance sneakers"
+                        android:textAppearance="@style/flashSaleName" />
+
+                    <TextView
+                        android:id="@+id/flashsale_2_price"
+                        android:layout_width="87dp"
+                        android:layout_height="12dp"
+                        android:layout_below="@+id/flashsale_1_name"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@+id/flashsale_1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 30,000"
+                        android:textAppearance="@style/flashSalePrice"
+                        tools:ignore="TextSizeCheck" />
+
+                    <ImageView
+                        android:id="@+id/flashsale_2_add_to_favoreites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="183dp"
+                        android:layout_toEndOf="@+id/flashsale_2_price"
+                        android:src="@drawable/add_flashsale_to_faverites" />
+
+                    <ImageView
+                        android:id="@+id/flashsale_2_add_to_shopping_cart"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="179dp"
+                        android:layout_toEndOf="@+id/flashsale_2_add_to_favoreites"
+                        android:src="@drawable/add_flashsale_to_cart"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <!--            BRANDS-->
+            <TextView
+                android:id="@+id/brands_txt"
+                android:layout_width="53dp"
+                android:layout_height="18dp"
+                android:layout_below="@+id/scrollview_flashsale"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/brands"
+                android:textAppearance="@style/headlines"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/view_all3"
+                android:layout_width="34dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/scrollview_flashsale"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/furniture_txt"
+                android:gravity="top"
+                android:text="@string/view_all"
+                android:textAppearance="@style/view_all" />
+
+            <!--            Latest scroll-->
+            <HorizontalScrollView
+                android:id="@+id/scrollview_brands"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/brands_txt"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:scrollbarStyle="insideOverlay">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#FAF9FF"
+                    android:orientation="horizontal"
+                    tools:ignore="ScrollViewSize">
+
+                    <!--            latest 1-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/brand1"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="11dp"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/latest1"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/brand1_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="91dp"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Phones"
+                        android:textAppearance="@style/latestProductCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand1_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/brand1_category"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="10"
+                        android:text="Samsung S10"
+                        android:textAppearance="@style/latestProductName"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand1_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/brand1_name"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 180,000"
+                        android:textAppearance="@style/latestProductPrice"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/brand1_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="124dp"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            brand 2-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/brand2"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/brand1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/latest1"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/brand2_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/brand1"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Games"
+                        android:textAppearance="@style/latestProductCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand2_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/brand2_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/brand1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="Play Station 5 console"
+                        android:textAppearance="@style/latestProductName"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand2_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/brand2_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/brand1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 90,000"
+                        android:textAppearance="@style/latestProductPrice"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/brand2_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/brand1"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            latest 3-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/brand3"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/brand2"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/latest1"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/brand3_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/brand2"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Games"
+                        android:textAppearance="@style/latestProductCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand3_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/brand1_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/brand2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="Play Station 5 console"
+                        android:textAppearance="@style/latestProductName"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand3_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/brand3_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/brand2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 90,000"
+                        android:textAppearance="@style/latestProductPrice"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/brand3_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/brand2"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription" />
+
+                    <!--            latest 4-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/brand4"
+                        style="@style/latestProductImgRound"
+                        android:layout_width="114dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/brand3"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/latest1"
+                        app:shapeAppearanceOverlay="@style/latestProductImgRound" />
+
+                    <TextView
+                        android:id="@+id/brand4_category"
+                        android:layout_width="35dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="91dp"
+                        android:layout_toEndOf="@+id/brand3"
+                        android:background="@drawable/rectangle_latest_category"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Games"
+                        android:textAppearance="@style/latestProductCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand4_name"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_below="@+id/brand1_category"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/brand3"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="Play Station 5 console"
+                        android:textAppearance="@style/latestProductName"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/brand4_price"
+                        android:layout_width="40dp"
+                        android:layout_height="9dp"
+                        android:layout_below="@+id/brand3_name"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toEndOf="@+id/brand3"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="top"
+                        android:text="$ 90,000"
+                        android:textAppearance="@style/latestProductPrice"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/brand4_add_to_shopping_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="101dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_toEndOf="@+id/brand3"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/add_product_to_shoping_cart"
+                        tools:ignore="ContentDescription,HardcodedText" />
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

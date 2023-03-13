@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "65763280748",
+    "firebase_url": "https://online-shop-fishcake-default-rtdb.firebaseio.com",
+    "project_id": "online-shop-fishcake",
+    "storage_bucket": "online-shop-fishcake.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65763280748:android:a7b96288518941824f9549",
+        "android_client_info": {
+          "package_name": "com.example.onlineshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65763280748-mh4l36d93etgea1lihbg1671nr0898b6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onlineshop",
+            "certificate_hash": "902762a75f9e0b7e65a0918143d80bfa24c62e2b"
+          }
+        },
+        {
+          "client_id": "65763280748-e9780npqegsi3e9vd4l4uef0vfv97rmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3uZO-B6MfamcpAPCkwWzy4C06UYkYINo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65763280748-e9780npqegsi3e9vd4l4uef0vfv97rmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
